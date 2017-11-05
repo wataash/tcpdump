@@ -456,6 +456,8 @@ ndo_printf(netdissect_options *ndo, const char *fmt, ...)
 	ret = vfprintf(stdout, fmt, args);
 	va_end(args);
 
+	fflush(stdout);
+
 	if (ret < 0)
 		ndo_error(ndo, "Unable to write output: %s", pcap_strerror(errno));
 	return (ret);

@@ -135,6 +135,9 @@ extern const char *netdb_protoname (const nd_uint8_t);
 #ifndef IPPROTO_PGM
 #define IPPROTO_PGM             113
 #endif
+#ifndef IPPROTO_L2TP
+#define IPPROTO_L2TP		115
+#endif
 #ifndef IPPROTO_SCTP
 #define IPPROTO_SCTP		132
 #endif

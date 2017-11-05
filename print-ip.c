@@ -500,9 +500,13 @@ again:
 
 	default:
 		if (ndo->ndo_nflag==0 && (p_name = netdb_protoname(ipds->nh)) != NULL)
+		{
 			ND_PRINT((ndo, " %s", p_name));
+		}
 		else
+		{
 			ND_PRINT((ndo, " ip-proto-%d", ipds->nh));
+		}
 		ND_PRINT((ndo, " %d", ipds->len));
 		break;
 	}
